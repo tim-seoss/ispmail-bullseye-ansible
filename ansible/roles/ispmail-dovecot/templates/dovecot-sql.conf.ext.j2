@@ -158,3 +158,5 @@ user_query = {{ ispmail_dovecot_user_query|default("if  SELECT email as user, \n
 "  FROM virtual_users WHERE email='%u';") }}
 
 password_query = {{ ispmail_dovecot_password_query|default("SELECT password FROM virtual_users WHERE email='%u';") }}
+
+iterate_query = {{ ispmail_dovecot_iterate_query|default("SELECT email AS user FROM virtual_users;") }}
